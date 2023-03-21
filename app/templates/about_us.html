@@ -1,20 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>About Us</title>
-    <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css">
-    <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" href="../static/css/menubar.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    <h1>I am ZaherO. Adidas is cool.</h1>
-</body>
+	<header>
+		<a href="/" class="logo">Beer Recommender</a>
+		<div class="right">
+		  <div class="btns menuToggle">
+			<ion-icon name="menu-outline"></ion-icon>
+			<ion-icon name="close-outline"></ion-icon>
+		  </div>
+		</div>
+	  </header>
+	  <ul class="navigation">
+		<li><a href="/" class="active">Home</a></li>
+		<li><a href="/about_us">About Us</a></li>
+		<li><a href="/tableau">Tableau</a></li>
+		<li><a href="/recommender">Recommender</a></li>
+		<li><a href="/data">Data Table</a></li>
+		<li><a href="/resources">Works Cited</a></li>
+	  </ul>
+	  
 
+	<div class="container">
+		<div class="about-us">
+			<div class="who-we-are">
+				<h1 style="color: white;">About Us - Group 4</h1>
+			</div>
+			<div class="cards">
+				<div class="card">
+					<div class="card-img card-img1"></div>
+					<div class="card-body">
+						<h3 style="color: white;">Gage Anderson</h3>
+						<p style="color: white;">Dummy text.</p>
+					</div>
+					</div>
+			
+			
+			<div class="card">
+					<div class="card-img card-img2"></div>
+					<card class="card-body">
+						<h3 style="color: white;">Will Hughes</h3>
+						<p style="color: white;">Dummy text.</p>
+					</card>
+				</div>
+			
+			<div class="card">
+					<div class="card-img card-img3"></div>
+					<card class="card-body">
+						<h3 style="color: white;">Japhet Mwamba</h3>
+						<p style="color: white;">Dummy text.</p>
+					</card>
+				</div>
+			
+			<div class="card">
+					<div class="card-img card-img4"></div>
+					<card class="card-body">
+						<h3 style="color: white;">Omar Zaher</h3>
+						<p style="color: white;">Dummy text.</p>
+					</card>
+				</div>
+		
+			
+		</div>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script>
+		  let menuToggle = document.querySelector('.menuToggle');
+		  let dayNight = document.querySelector('.dayNight');
+		  let body = document.querySelector('body');
+		  let navigation = document.querySelector('.navigation');
+		  menuToggle.onclick = function(){
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+		  }
+		  dayNight.onclick = function(){
+			dayNight.classList.toggle('active')
+			body.classList.toggle('dark')
+		  }
+		</script>
+
+
+</body>
 </html>

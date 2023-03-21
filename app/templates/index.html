@@ -1,83 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>HOME</title>
-    <!-- Boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
-    <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- JS -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beer Recommender</title>
+  <link rel="stylesheet" href="../static/css/menubar.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
 </head>
-
 <body>
-    <nav class="navbar navbar-light" style="background-color: #f2ab05;">Beer
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" >Beer
-                <span class="sr-only">(current)</span>
-              </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <a href="/about_us" style = >About Us</a>
-    <hr style="color:lightgray; border-width: 3px;">
-    <div class="container">
-        <div class="card border-primary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Filters</div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="abv">ABV</label>
-                            <select id="abv">
-                                <option value="1">High ABV</option>
-                                <option value="0">Medium ABV</option>
-                                <option value="0">Low ABV</option>
-                            </select>
-                        </div>
-                        <label class="col-form-label" for="beer_style">Beer Style</label>
-                        <div class="beer_style">
-                            <select id = "beer_style">
-                            <option value="1">good </option>
-                            <option value="0">gooder </option>
-                            <option value="0">goodest </option>
-                            </select>
-                        </div>
-
-
-                        
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" id="filter">Recommend My Beer!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <header>
+    <a href="/" class='logo'>Beer Recommender</a>
+    <div class="right">
+      <div class="btns menuToggle">
+        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="close-outline"></ion-icon>
+      </div>
     </div>
-    <hr style="color:lightgray; border-width: 3px;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 id="output"></h1>
-            </div>
-        </div>
+  </header>
+  <ul class="navigation">
+    <li><a href="/" class="active">Home</a></li>
+    <li><a href="/about_us">About Us</a></li>
+    <li><a href="/tableau">Tableau</a></li>
+    <li><a href="/recommender">Recommender</a></li>
+    <li><a href="/data">Data Table</a></li>
+    <li><a href="/resources">Works Cited</a></li>
+  </ul>
+  <section class="main">
+    <img src="../static/images/beer.jpg" class="mask">
+    <div class="center">
+      <h1>PROST, Y'ALL!</h1>
+      <p>This website is our analysis of various beers and beer types, all tied together through Tableau visualizations and three recommendation models.</p>
     </div>
+    <p class="text">Group 4 - Project 4</p>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let menuToggle = document.querySelector('.menuToggle');
+    let body = document.querySelector('body');
+    let navigation = document.querySelector('.navigation');
+    menuToggle.onclick = function(){
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+
 
 </body>
-
 </html>
