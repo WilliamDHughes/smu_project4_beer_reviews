@@ -3,7 +3,7 @@ from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
 
-df = pd.read_csv("static/data/aggregated_review_scores.csv")
+df = pd.read_csv("app/static/data/aggregated_review_scores.csv")
     
 bins = [0, 5.0, 7.9, df.abv.max()]
 labels = ['Low ABV (0-5%)', 'Medium ABV (5-8%)', 'High ABV (8%+)']

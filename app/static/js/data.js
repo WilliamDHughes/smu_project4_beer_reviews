@@ -5,7 +5,7 @@ $(document).ready(function() {
 }); 
 
 function buildTable() {
-    d3.csv("static/data/aggregated_review_scores.csv").then(function(beerData) {
+    d3.csv("app/static/data/aggregated_review_scores.csv").then(function(beerData) {
 
         var filteredData = beerData
             
