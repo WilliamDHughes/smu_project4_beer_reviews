@@ -1,25 +1,24 @@
 $(document).ready(function() {
-    console.log("Page Loaded");
 
-    $("#filter").click(function() {
+    $("#filterbyname").click(function() {
         var beerName = $("#name").val();
-        makePredictions(beerName);
+        makePredictionsName(beerName);
     });
 
-    $("#filter2").click(function() {
+    $("#filterbystyle").click(function() {
         var beerStyle = $("#style").val();
-        makePredictions(beerStyle);
+        makePredictionsStyle(beerStyle);
     });
 
-    $("#filter3").click(function() {
+    $("#filterbyabv").click(function() {
         var abv = $("#abv").val();
         var ibu = $("#ibu").val();
-        makePredictions(abv, ibu);
+        makePredictionsAbvIbu(abv, ibu);
     });
 });
 
 // call Flask API endpoint
-function makePredictions(beer_name) {
+function makePredictionsName(beer_name) {
     // create the payload
     var payload = {
         "beer_name": beer_name
@@ -32,8 +31,6 @@ function makePredictions(beer_name) {
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
-            // print it
-            console.log(returnedData);
 
             var beer = JSON.parse(returnedData)
 
@@ -56,6 +53,7 @@ function makePredictions(beer_name) {
             $('#output').empty().html(table);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("The beer you entered is not in this list. Check spelling and try again.");
             alert("Status: " + textStatus);
             alert("Error: " + errorThrown);
         }
@@ -63,7 +61,7 @@ function makePredictions(beer_name) {
 }
 
 // call Flask API endpoint
-function makePredictions(beer_style) {
+function makePredictionsStyle(beer_style) {
     // create the payload
     var payload = {
         "beer_style": beer_style
@@ -76,8 +74,6 @@ function makePredictions(beer_style) {
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
-            // print it
-            console.log(returnedData);
 
             var beer = JSON.parse(returnedData)
 
@@ -107,7 +103,7 @@ function makePredictions(beer_style) {
 }
 
 // call Flask API endpoint
-function makePredictions(abv, ibu) {
+function makePredictionsAbvIbu(abv, ibu) {
     // create the payload
     var payload = {
         "beer_abv": abv,
@@ -121,8 +117,6 @@ function makePredictions(abv, ibu) {
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
-            // print it
-            console.log(returnedData);
 
             var beer = JSON.parse(returnedData)
 

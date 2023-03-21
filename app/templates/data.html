@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Data Table</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+		<link rel="stylesheet" href="../static/css/menubar.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Dataframe -->
+		<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
+		<!-- JS -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+		<script type="text/javascript" src="../static/js/data.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.bootstrap4.min.css">
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	</head>
+	<body>
+		<header class="datapage">
+			<a href="/" class="logo">Beer Recommender</a>
+			<div class="right">
+				<div class="btns menuToggle">
+					<ion-icon name="menu-outline"></ion-icon>
+					<ion-icon name="close-outline"></ion-icon>
+				</div>
+			</div>
+		</header>
+		<ul class="navigation">
+			<li><a href="/" class="active">Home</a></li>
+			<li><a href="/about_us">About Us</a></li>
+			<li><a href="/tableau">Tableau</a></li>
+			<li><a href="/recommender">Recommender</a></li>
+			<li><a href="/data">Data Table</a></li>
+			<li><a href="/resources">Works Cited</a></li>
+		</ul>
+		<div class="container-fluid">
+            <div class="row">
+                    <div id="table-area" class="">
+                        <div class="table-responsive">
+                        <table id="table" class="table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="table-head">beer_id</th>
+                                    <th class="table-head">beer_name</th>
+                                    <th class="table-head">beer_style</th>
+                                    <th class="table-head">look</th>
+                                    <th class="table-head">smell</th>
+                                    <th class="table-head">taste</th>
+                                    <th class="table-head">feel</th>
+                                    <th class="table-head">overall</th>
+                                    <th class="table-head">estimated_ibu</th>
+                                    <th class="table-head">availability</th>
+                                    <th class="table-head">abv</th>
+                                    <th class="table-head">brewery_id</th>
+                                    <th class="table-head">brewery_name</th>
+                                    <th class="table-head">city</th>
+                                    <th class="table-head">state</th>
+                                    <th class="table-head">country</th>
+                                    <th class="table-head">types</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    </div>
+            </div>
+        </div>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script>
+			let menuToggle = document.querySelector('.menuToggle');
+			let body = document.querySelector('body');
+			let navigation = document.querySelector('.navigation');
+			menuToggle.onclick = function(){
+			menuToggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+			}
+		</script>
+	</body>
+</html>

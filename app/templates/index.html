@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beer Recommender</title>
-  <link rel="stylesheet" href="../static/css/menubar.css">
-  <link rel="stylesheet" href="../static/css/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
-</head>
-<body>
-  <header>
-    <a href="/" class='logo'>Beer Recommender</a>
-    <div class="right">
-      <div class="btns menuToggle">
-        <ion-icon name="menu-outline"></ion-icon>
-        <ion-icon name="close-outline"></ion-icon>
-      </div>
-    </div>
-  </header>
-  <ul class="navigation">
-    <li><a href="/" class="active">Home</a></li>
-    <li><a href="/about_us">About Us</a></li>
-    <li><a href="/tableau">Tableau</a></li>
-    <li><a href="/recommender">Recommender</a></li>
-    <li><a href="/data">Data Table</a></li>
-    <li><a href="/resources">Works Cited</a></li>
-  </ul>
-  <section class="main">
-    <img src="../static/images/beer.jpg" class="mask">
-    <div class="center">
-      <h1>PROST, Y'ALL!</h1>
-      <p>This website is our analysis of various beers and beer types, all tied together through Tableau visualizations and three recommendation models.</p>
-    </div>
-    <p class="text">Group 4 - Project 4</p>
-  </section>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    let menuToggle = document.querySelector('.menuToggle');
-    let body = document.querySelector('body');
-    let navigation = document.querySelector('.navigation');
-    menuToggle.onclick = function(){
-      menuToggle.classList.toggle('active')
-      navigation.classList.toggle('active')
-    }
-  </script>
-
-
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Beer Recommender</title>
+		<link rel="stylesheet" href="../static/css/menubar.css">
+		<link rel="stylesheet" href="../static/css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+	</head>
+	<body>
+		<header>
+			<a href="/" class='logo'>Beer Recommender</a>
+			<div class="right">
+				<div class="btns menuToggle">
+					<ion-icon name="menu-outline"></ion-icon>
+					<ion-icon name="close-outline"></ion-icon>
+				</div>
+			</div>
+		</header>
+		<ul class="navigation">
+			<li><a href="/" class="active">Home</a></li>
+			<li><a href="/about_us">About Us</a></li>
+			<li><a href="/tableau">Tableau</a></li>
+			<li><a href="/recommender">Recommender</a></li>
+			<li><a href="/data">Data Table</a></li>
+			<li><a href="/resources">Works Cited</a></li>
+		</ul>
+		<section class="main">
+			<img src="../static/images/beer.jpg" class="mask">
+			<div class="center">
+				<h1>PROST, Y'ALL!</h1>
+				<p>This website is our analysis of various beers and beer types, all tied together through Tableau visualizations and three recommendation models.</p>
+			</div>
+			<p class="text">Group 4 - Project 4</p>
+		</section>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script>
+			let menuToggle = document.querySelector('.menuToggle');
+			let body = document.querySelector('body');
+			let navigation = document.querySelector('.navigation');
+			menuToggle.onclick = function(){
+			  menuToggle.classList.toggle('active')
+			  navigation.classList.toggle('active')
+			}
+		</script>
+	</body>
 </html>
