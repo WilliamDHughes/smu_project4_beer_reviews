@@ -35,7 +35,7 @@ df = df[['beer_name', 'beer_style', 'abv_category', 'ibu_category', 'availabilit
 k = 10
 
 # initialize the model with the number of neighbors
-model = NearestNeighbors(n_neighbors=k)
+model = NearestNeighbors(metric='euclidean', n_neighbors=k)
 
 # fit the model to the data
 model.fit(df_model[features])
