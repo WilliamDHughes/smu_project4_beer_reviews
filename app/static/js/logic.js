@@ -33,7 +33,7 @@ function makePredictionsName(beer_name) {
         success: function(returnedData) {
 
             var beer = JSON.parse(returnedData)
-
+            document.getElementById("recommend_header").innerHTML = "By Beer Name";
             let table = '<thead><tr><th style="background-color:#DEA90A; padding:5px">Name</th><th style="background-color:#DEA90A; padding:5px">Style</th><th style="background-color:#DEA90A; padding:5px">ABV</th><th style="background-color:#DEA90A; padding:5px">IBU</th><th style="background-color:#DEA90A; padding:5px">Availability</th><th style="background-color:#DEA90A; padding:5px">Brewery</th><th style="background-color:#DEA90A; padding:5px">City</th><th style="background-color:#DEA90A; padding:5px">State</th><th style="background-color:#DEA90A; padding:5px">Brewery Type</th></tr></thead><tbody>';
 
             $.each(beer , function(index, item) { 
@@ -76,7 +76,7 @@ function makePredictionsStyle(beer_style) {
         success: function(returnedData) {
 
             var beer = JSON.parse(returnedData)
-
+            document.getElementById("recommend_header").innerHTML = "By Beer Style";
             let table = '<thead><tr><th style="background-color:#DEA90A; padding:5px">Name</th><th style="background-color:#DEA90A; padding:5px">Style</th><th style="background-color:#DEA90A; padding:5px">ABV</th><th style="background-color:#DEA90A; padding:5px">IBU</th><th style="background-color:#DEA90A; padding:5px">Availability</th><th style="background-color:#DEA90A; padding:5px">Brewery</th><th style="background-color:#DEA90A; padding:5px">City</th><th style="background-color:#DEA90A; padding:5px">State</th><th style="background-color:#DEA90A; padding:5px">Brewery Type</th></tr></thead><tbody>';
 
             $.each(beer , function(index, item) { 
@@ -92,7 +92,7 @@ function makePredictionsStyle(beer_style) {
             });
 
             table += '</tbody>';
-
+            
             $('#output').empty().html(table);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -119,7 +119,7 @@ function makePredictionsAbvIbu(abv, ibu) {
         success: function(returnedData) {
 
             var beer = JSON.parse(returnedData)
-
+            document.getElementById("recommend_header").innerHTML = "By Beer ABV & IBU";
             let table = '<thead><tr><th style="background-color:#DEA90A; padding:5px">Name</th><th style="background-color:#DEA90A; padding:5px">Style</th><th style="background-color:#DEA90A; padding:5px">ABV</th><th style="background-color:#DEA90A; padding:5px">IBU</th><th style="background-color:#DEA90A; padding:5px">Availability</th><th style="background-color:#DEA90A; padding:5px">Brewery</th><th style="background-color:#DEA90A; padding:5px">City</th><th style="background-color:#DEA90A; padding:5px">State</th><th style="background-color:#DEA90A; padding:5px">Brewery Type</th></tr></thead><tbody>';
 
             $.each(beer , function(index, item) { 
