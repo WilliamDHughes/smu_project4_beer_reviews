@@ -125,6 +125,16 @@ text-align: center;
 	margin:10px;
 	flex-wrap: wrap;
 }
+.cards a {
+    color: #DEA90A;
+    text-decoration: none;
+}
+
+.cards a:hover {
+    color:#fff; 
+    text-decoration: none; 
+    cursor: pointer;  
+}
 .card-img{
 	border-radius: 5px;
 }
@@ -147,7 +157,7 @@ text-align: center;
 	width: 250px;
 	height: 250px;
 	margin-bottom: 10px;
-	background-image: url('../images/dummy.png');
+	background-image: url('../images/gage.png');
 	background-size: cover;
 	background-position: center center;
 	border: 2px solid #DEA90A;
@@ -174,7 +184,7 @@ text-align: center;
 	width: 250px;
 	height: 250px;
 	margin-bottom: 10px;
-	background-image: url('../images/dummy.png');
+	background-image: url('../images/imageZ.png');
 	background-size: cover;
 	background-position: center center;
 	border: 2px solid #DEA90A;
